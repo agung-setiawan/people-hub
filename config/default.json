@@ -1,0 +1,10 @@
+{
+  "mongoURI": "mongodb+srv://admin_db:Karkunku_11@devconnector-lkjfd.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret",
+  "githubClientId": "",
+  "githubSecret": "",
+  "sendGridKey": "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",
+  "cloud_name": "cv-lives",
+  "api_key": "552986963783848",
+  "api_secret": "wSEJMmrDvHyiJrcx013qKPYHT0k"
+}
