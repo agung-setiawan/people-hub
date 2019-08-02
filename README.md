@@ -1,20 +1,26 @@
-# DevConnector 2.0
+# People Hub 1.0
 
-> Social network for developers
+> Connetion Platform for all peoples
 
-This is a MERN stack application from the "MERN Stack Front To Back" course on [Udemy](https://www.udemy.com/mern-stack-front-to-back/?couponCode=TRAVERSYMEDIA). It is a small social network app that includes authentication, profiles and forum posts.
+This platform built with is a MERN stack application It is a small platform app that includes authentication, profiles.
+
+## Features :
+
+1. Register.
+2. Activation Account
+3. Login
+4. Forgot Password
+5. Password Reset
+6. Update Profile.
+7. Update Avatar Image
 
 ## Quick Start
 
 ```
-# change default.json file in config folder
+For live Version please visit this link :
 
-# this file is located in config/default.json
+<a href="https://immense-journey-48645.herokuapp.com">immense-journey-48645.herokuapp.com</a>
 
-# add uri of your mongodb connection for example
-
- "mongoURI": "mongodb://localhost/dev-social",
- 
 ```
 
 ```bash
@@ -37,12 +43,12 @@ npm run build
 
 ### Author
 
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
+Agung Setiawan
+Jakarta
 
 ### Version
 
-2.0.0
+1.0.0
 
 ### License
 
