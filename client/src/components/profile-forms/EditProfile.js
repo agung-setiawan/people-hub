@@ -96,7 +96,8 @@ const EditProfile = ({
     reader.onloadend = () => {
       setFormData({
         avatar: reader.result,
-        file: files
+        file: files,
+        bio: bio
       });
     };
     reader.readAsDataURL(files);
