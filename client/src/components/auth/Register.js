@@ -35,7 +35,7 @@ const Register = ({ setAlert, register, sosmedRegister, isAuthenticated }) => {
   };
 
   const responseGoogle = response => {
-    console.log(response);
+    console.log(response.profileObj);
   };
 
   if (isAuthenticated) {
