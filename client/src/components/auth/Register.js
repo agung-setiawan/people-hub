@@ -35,7 +35,14 @@ const Register = ({ setAlert, register, sosmedRegister, isAuthenticated }) => {
   };
 
   const responseGoogle = response => {
-    console.log(response.profileObj);
+    let userName =
+      response.profileObj.givenName + " " + response.profileObj.familyName;
+    sosmedRegister(
+      userName,
+      response.profileObj.email,
+      response.profileObj.imageUrl
+    );
+    // console.log(response.profileObj);
   };
 
   if (isAuthenticated) {
