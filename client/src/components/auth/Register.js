@@ -6,7 +6,7 @@ import { register, fbRegister } from "../../actions/auth";
 import PropTypes from "prop-types";
 
 import FacebookLogin from "react-facebook-login";
-// import goLogin from "react-google-login";
+import GoogleLogin from "react-google-login";
 
 const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -30,20 +30,13 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
     }
   };
 
-  const sendNotif = e => {
-    setAlert("Passwords do not match", "danger");
-  };
-
   const responseFacebook = response => {
     fbRegister(response.name, response.email, response.picture.data.url);
-    // console.log(
-    //   response.name + " - " + response.email + " - " + response.picture.data.url
-    // );
   };
 
-  // const responseGoogle = (response) => {
-  //   console.log(response);
-  // }
+  const responseGoogle = response => {
+    console.log(response);
+  };
 
   if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
@@ -100,9 +93,6 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
           <input type="submit" className="btn btn-primary" value="Register" />
         </form>
         <p className="my-1" style={{ textAlign: "center" }}>
-          {/* <button type="button" className="btn google-signup">
-            <i className="fab fa-google" /> Sign Up
-          </button> */}
           <FacebookLogin
             appId="757923874622619" //APP ID NOT CREATED YET
             fields="name,email,picture"
@@ -111,6 +101,21 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
             icon="fa-facebook"
             size="metro"
             textButton=" Sign Up"
+          />
+          <GoogleLogin
+            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            render={renderProps => (
+              <button
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                className="btn google-signup"
+              >
+                <i className="fab fa-google" /> Sign Up
+              </button>
+            )}
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={"single_host_origin"}
           />
         </p>
         <p className="my-1">
