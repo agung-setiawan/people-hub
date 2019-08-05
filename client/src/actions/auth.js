@@ -172,6 +172,10 @@ export const forgot = email => async dispatch => {
   }
 };
 
+export const setNotif = message => async dispatch => {
+  dispatch(setAlert(message, "danger"));
+};
+
 // Update Password
 export const updatePassword = (password, refCode) => async dispatch => {
   const config = {

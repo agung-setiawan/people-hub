@@ -30,6 +30,10 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
     }
   };
 
+  const sendNotif = e => {
+    setAlert("Passwords do not match", "danger");
+  };
+
   const responseFacebook = response => {
     fbRegister(response.name, response.email, response.picture.data.url);
     // console.log(

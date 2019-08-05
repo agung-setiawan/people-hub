@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 const Alert = ({ alerts }) => {
-  window.scrollTo();
   return (
     alerts !== null &&
     alerts.length > 0 &&
