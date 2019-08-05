@@ -103,7 +103,7 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
             textButton=" Sign Up"
           />
           <GoogleLogin
-            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            clientId="433347077231-k20tnol6ke34frnrt9s2jvagik7a2d21.apps.googleusercontent.com"
             render={renderProps => (
               <button
                 onClick={renderProps.onClick}
