@@ -69,7 +69,7 @@ export const register = ({ name, email, password }) => async dispatch => {
 };
 
 // Register User Via Facebook
-export const fbRegister = (name, email, picture) => async dispatch => {
+export const sosmedRegister = (name, email, picture) => async dispatch => {
   const config = {
     headers: {
       "Content-Type": "application/json"
@@ -79,7 +79,7 @@ export const fbRegister = (name, email, picture) => async dispatch => {
   const body = JSON.stringify({ name, email, picture });
 
   try {
-    const res = await axios.post("/api/users/fb/signup", body, config);
+    const res = await axios.post("/api/users/sosmed/signup", body, config);
 
     if (res.data.sts === "passed") {
       dispatch(login(email, res.data.uid));
@@ -170,10 +170,6 @@ export const forgot = email => async dispatch => {
       type: LOGIN_FAIL
     });
   }
-};
-
-export const setNotif = message => async dispatch => {
-  dispatch(setAlert(message, "danger"));
 };
 
 // Update Password

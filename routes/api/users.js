@@ -107,7 +107,7 @@ router.post(
 // @desc     Register user via Facebook
 // @access   Public
 router.post(
-  "/fb/signup",
+  "/sosmed/signup",
   [
     check("name", "Name is required")
       .not()

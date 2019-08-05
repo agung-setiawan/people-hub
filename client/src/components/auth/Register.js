@@ -2,13 +2,13 @@ import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
-import { register, fbRegister } from "../../actions/auth";
+import { register, sosmedRegister } from "../../actions/auth";
 import PropTypes from "prop-types";
 
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from "react-google-login";
 
-const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
+const Register = ({ setAlert, register, sosmedRegister, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,7 +31,7 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
   };
 
   const responseFacebook = response => {
-    fbRegister(response.name, response.email, response.picture.data.url);
+    sosmedRegister(response.name, response.email, response.picture.data.url);
   };
 
   const responseGoogle = response => {
@@ -129,7 +129,7 @@ const Register = ({ setAlert, register, fbRegister, isAuthenticated }) => {
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
-  fbRegister: PropTypes.func.isRequired,
+  sosmedRegister: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
 };
 
@@ -139,5 +139,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { setAlert, register, fbRegister }
+  { setAlert, register, sosmedRegister }
 )(Register);
