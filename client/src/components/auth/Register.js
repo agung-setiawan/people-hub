@@ -42,7 +42,6 @@ const Register = ({ setAlert, register, sosmedRegister, isAuthenticated }) => {
       response.profileObj.email,
       response.profileObj.imageUrl
     );
-    // console.log(response.profileObj);
   };
 
   if (isAuthenticated) {
@@ -101,7 +100,7 @@ const Register = ({ setAlert, register, sosmedRegister, isAuthenticated }) => {
         </form>
         <p className="my-1" style={{ textAlign: "center" }}>
           <FacebookLogin
-            appId="757923874622619" //APP ID NOT CREATED YET
+            appId="757923874622619"
             fields="name,email,picture"
             callback={e => responseFacebook(e)}
             cssClass="btn fb-signup"
